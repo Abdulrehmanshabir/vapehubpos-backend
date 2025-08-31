@@ -16,7 +16,14 @@ const branchRoutes = require('./src/routes/branches');
 
 const app = express();
 app.use(helmet());
-app.use(cors({ origin: process.env.CORS_ORIGIN || 'http://localhost:5173',  "https://vapehubpos-frontend.vercel.app", }));
+app.use(cors({
+  origin: process.env.CORS_ORIGIN ? process.env.CORS_ORIGIN.split(',') : [
+    'http://localhost:5173',
+    'https://vapehubpos-frontend.vercel.app'
+  ],
+  credentials: true
+}));
+
 app.use(express.json({ limit: '1mb' }));
 app.use(morgan('dev'));
 
