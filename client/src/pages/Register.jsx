@@ -8,7 +8,7 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { toast } from "react-toastify";
 
-const API = import.meta?.env?.VITE_API_URL || "http://localhost:3000";
+const API = import.meta?.env?.VITE_API_URL;
 
 export default function Register() {
   const [showPassword, setShowPassword] = useState(false);
