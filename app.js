@@ -19,7 +19,10 @@ app.use(helmet());
 app.use(cors({
   origin: process.env.CORS_ORIGIN ? process.env.CORS_ORIGIN.split(',') : [
     'http://localhost:5173',
-    'https://vapehubpos-frontend.vercel.app'
+    'https://vapehubpos-frontend.vercel.app',
+    'https://vapehubpos-frontend-git-main-abdul-rehman-shabirs-projects.vercel.app',
+    'https://vapehubpos-frontend-j664a0sf9-abdul-rehman-shabirs-projects.vercel.app',
+    'https://vapehubpos-frontend-nubxmb7wq-abdul-rehman-shabirs-projects.vercel.app'
   ],
   credentials: true
 }));
